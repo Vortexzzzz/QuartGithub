@@ -1,0 +1,60 @@
+<!-- HTML for navbar -->
+<nav id="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- CSS for navbar styling -->
+  <style>
+    #navbar {
+      background-color: rgb(27, 27, 27);
+      width: 100%;
+      height: 12%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+    }
+  
+    #navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  
+    #navbar li {
+      float: left;
+    }
+  
+    #navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    #navbar li a:hover {
+      background-color: #111;
+    }
+  </style>
+  
+  <!-- JavaScript for navbar functionality -->
+  <script>
+    // Get reference to navbar
+    var navbar = document.getElementById("navbar");
+  
+    // Add event listener to navbar to handle dropdown menus
+    navbar.addEventListener("click", function(e) {
+      if (e.target && e.target.nodeName == "A") {
+        var dropdownContent = e.target.nextElementSibling;
+        if (dropdownContent) {
+          dropdownContent.classList.toggle("hidden");
+        }
+      }
+    });
+  </script>
+  
